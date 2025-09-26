@@ -11,16 +11,15 @@ public class Ejercicio3 {
         System.out.println("Introduce un número, por favor");
         int number = read.nextInt();
 
-        if (number>0) {
-            System.out.println("Es positivo");
+        if (number > 0) {
+            System.out.println(number + " Es positivo");
         }
 
-        if (number<0) {
-            System.out.println("Es negativo");
+        else if (number<0) {
+            System.out.println(number + " Es negativo");
         }
-
-        if (number==0) {
-            System.out.println("Es natural");
+        else {
+            System.out.println(number + " Es natural");
         }
     }
 }
