@@ -8,15 +8,19 @@ public class Ejercicio1 {
 
         Scanner read = new Scanner(System.in);
 
-        System.out.println("Introduce las horas trabajadas, por favor");
-        double horas = read.nextDouble();
+        try {
 
-        System.out.println("Introduce la tarifa por hora, por favor");
-        double tarifa = read.nextDouble();
+            System.out.println("Introduce las horas trabajadas, por favor");
+            double horas = read.nextDouble();
 
-        double salario = horas * tarifa;
+            System.out.println("Introduce la tarifa por hora, por favor");
+            double tarifa = read.nextDouble();
 
-        System.out.println("Salario: " + salario + "€");
+            double salario = horas * tarifa;
+
+            System.out.println("Salario: " + salario + "€");
+        } catch (Exception e) {
+            System.out.println("El formato no es de texto");
+        }
     }
 }
-
