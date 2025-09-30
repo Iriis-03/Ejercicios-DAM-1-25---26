@@ -2,5 +2,5 @@ package org.example;
 
 //Objetivo
 
-public class Práctica3 {
+public class Practica3 {
 }

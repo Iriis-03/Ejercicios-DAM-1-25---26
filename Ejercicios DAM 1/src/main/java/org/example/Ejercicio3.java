@@ -9,6 +9,7 @@ public class Ejercicio3 {
         Scanner read = new Scanner(System.in);
         int number = 0;
 
+<<<<<<< HEAD
         try {
             System.out.println("Introduce un número, por favor");
             number = read.nextInt();
@@ -17,13 +18,21 @@ public class Ejercicio3 {
         }
         if (number > 0) {
             System.out.println(number + " Es positivo");
+=======
+        System.out.println("Introduce un número, por favor");
+        int number = read.nextInt();
+
+        if (number>0) {
+            System.out.println("Es positivo");
+>>>>>>> 1970d43a66852904270b4392a17207723879f8b3
         }
 
-        else if (number<0) {
-            System.out.println(number + " Es negativo");
+        if (number<0) {
+            System.out.println("Es negativo");
         }
-        else {
-            System.out.println(number + " Es natural");
+
+        if (number==0) {
+            System.out.println("Es natural");
         }
     }
 }
