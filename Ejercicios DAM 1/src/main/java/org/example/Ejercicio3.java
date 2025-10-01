@@ -9,30 +9,31 @@ public class Ejercicio3 {
         Scanner read = new Scanner(System.in);
         int number = 0;
 
-<<<<<<< HEAD
+
         try {
             System.out.println("Introduce un número, por favor");
             number = read.nextInt();
-        } catch (Exception e){
+        } catch (Exception e) {
             System.out.println("El formato no es de texto");
         }
         if (number > 0) {
             System.out.println(number + " Es positivo");
-=======
-        System.out.println("Introduce un número, por favor");
-        int number = read.nextInt();
 
-        if (number>0) {
-            System.out.println("Es positivo");
->>>>>>> 1970d43a66852904270b4392a17207723879f8b3
-        }
+            System.out.println("Introduce un número, por favor");
+            number = read.nextInt();
 
-        if (number<0) {
-            System.out.println("Es negativo");
-        }
+            if (number > 0) {
+                System.out.println("Es positivo");
 
-        if (number==0) {
-            System.out.println("Es natural");
+            }
+
+            if (number < 0) {
+                System.out.println("Es negativo");
+            }
+
+            if (number == 0) {
+                System.out.println("Es natural");
+            }
         }
     }
 }
