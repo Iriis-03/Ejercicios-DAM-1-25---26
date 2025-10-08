@@ -1,29 +1,29 @@
-    package org.example;
+package org.example;
 
-    import java.util.Scanner;
+import java.util.Scanner;
 
-    public class Examen {
+public class Examen {
 
-        public static void main() {
-            int num = 0;
-            Scanner read = new Scanner(System.in);
-            boolean continuar;
-            do {
-                continuar=false;
-                try {
-                    System.out.println("Introduce un número, por favor...");
-                    num = read.nextInt();
-                } catch (Exception e) {
-                    System.out.println("El formato no es correcto");
-                    continuar=true;
-                }read.nextLine();
-            }while(continuar);
+    public static void main(String[] args) {
+        int num = 0;
+        Scanner read = new Scanner(System.in);
+        boolean continuar;
 
-                if (num < 0)
-                    num = num * (-1);
+        do {
+            continuar = false;
+            try {
+                System.out.println("Introduce un número, por favor...");
+                num = read.nextInt();
+            } catch (Exception e) {
+                System.out.println("El formato no es correcto");
+                read.nextLine(); // limpia el buffer solo si hubo error
+                continuar = true;
+            }
+        } while (continuar);
 
-            System.out.println("El valor absoluto es " + num);
-            num = read.nextInt();
+        if (num < 0)
+            num = num * (-1);
 
-        }
+        System.out.println("El valor absoluto es " + num);
     }
+}
