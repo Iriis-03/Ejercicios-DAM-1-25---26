@@ -2,9 +2,9 @@ package org.example;
 
 import java.util.Scanner;
 
-public class Examen {
+public class ExamenValorAbsoluto {
 
-    public static void main(String[] args) {
+    static void main() {
         int num = 0;
         Scanner read = new Scanner(System.in);
         boolean continuar;
@@ -16,7 +16,7 @@ public class Examen {
                 num = read.nextInt();
             } catch (Exception e) {
                 System.out.println("El formato no es correcto");
-                read.nextLine(); // limpia el buffer solo si hubo error
+                read.nextLine();
                 continuar = true;
             }
         } while (continuar);
