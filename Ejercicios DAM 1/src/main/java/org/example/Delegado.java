@@ -4,7 +4,7 @@ import java.util.Scanner; // Importa la clase Scanner para poder leer datos desd
 
 public class Delegado { // Declaración de la clase principal llamada Delegado
 
-    static void main() { // Método principal del programa (debería ser 'public static void main(String[] args)' para ejecutarse normalmente)
+    static void main() {
         Scanner read = new Scanner(System.in); // Crea un objeto Scanner llamado 'read' para leer entradas del usuario
 
         int votosA = 0, votosB = 0, votosC = 0; // Inicializa los contadores de votos de cada candidato en 0
@@ -35,7 +35,7 @@ public class Delegado { // Declaración de la clase principal llamada Delegado
         }
 
         // Mostrar los resultados de la votación
-        System.out.println("--- Resultados ---");
+        System.out.println("Resultados");
         System.out.println("Ana: " + votosA + " votos"); // Muestra los votos de Ana
         System.out.println("Bruno: " + votosB + " votos"); // Muestra los votos de Bruno
         System.out.println("Carla: " + votosC + " votos"); // Muestra los votos de Carla
