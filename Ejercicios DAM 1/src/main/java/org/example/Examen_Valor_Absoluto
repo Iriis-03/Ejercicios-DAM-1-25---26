@@ -4,7 +4,7 @@
 
     public class Examen {
 
-        public static void main(String[] args) {
+        public static void main() {
             int num = 0;
             Scanner read = new Scanner(System.in);
             boolean continuar;
