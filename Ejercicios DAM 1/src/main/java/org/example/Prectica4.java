@@ -12,7 +12,6 @@ public class Practica4 {
 
         int multiplicando;//Tanto la variable "multiplicando" como "multiplicador" son números enteros porque el programa pide que sean números de 3 cifras sin decimales.
         int multiplicador;
-        int numero = 0;
         int resultado;
         Integer resultado_linea1;
         Integer resultado_linea2; //Intenger es una clase/class
