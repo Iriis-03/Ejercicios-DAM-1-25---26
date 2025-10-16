@@ -12,7 +12,7 @@ public class Ejercicio1_TEMA2 {
         String frase = read.nextLine();
 
         int longitud = frase.length();
-        System.out.println(longitud);
+        System.out.println("La longitud del texto es de " + longitud + " carácteres");
 
         String frase_reemplazos = frase.replace(" ", "");
         System.out.println(frase_reemplazos);
@@ -23,7 +23,8 @@ public class Ejercicio1_TEMA2 {
         String mitad2 = frase.substring(longitud/2, longitud);
         System.out.println(mitad2);
 
-
+        String frase_mayusculas = frase.toUpperCase();
+        System.out.println(frase_mayusculas);
 
         System.out.println();
 

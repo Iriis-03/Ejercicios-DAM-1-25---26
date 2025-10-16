@@ -12,7 +12,7 @@ public class Practica1_TEMA2 {
         String fecha = read.nextLine();
 
         if (fecha.charAt(2) != '/' || fecha.charAt(5) != '/') { //Se utiliza charAt para seleccionar justo el carácter que necesitas modificar.
-            System.out.println("El formato no es correcto. Usa /"); //Tenía que modificar el char 2 y 8, qué es donde se encuentran las barras, para que en caso que el usuario introduzca algo diferente (!=) a las barras, le salte un error.
+            System.out.println("El formato no es correcto."); //Tenía que modificar el char 2 y 8, qué es donde se encuentran las barras, para que en caso que el usuario introduzca algo diferente (!=) a las barras, le salte un error.
         } else {
 
                 String dia_string = fecha.substring(0, 2); //Separamos el día de la fecha introducida por el usuario (substring) según las posiciones de los 3 primeros carácteres (contando las barras)

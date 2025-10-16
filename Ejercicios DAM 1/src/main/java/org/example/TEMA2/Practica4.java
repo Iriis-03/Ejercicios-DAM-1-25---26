@@ -13,9 +13,9 @@ public class Practica4 {
         int multiplicando;//Tanto la variable "multiplicando" como "multiplicador" son números enteros porque el programa pide que sean números de 3 cifras sin decimales.
         int multiplicador;
         int resultado;
-        Integer resultado_linea1;
-        Integer resultado_linea2; //Intenger es una clase/class
-        Integer resultado_linea3;
+        int resultado_linea1;
+        int resultado_linea2;
+        int resultado_linea3;
 
         System.out.println("Introduce el multiplicando (3 cifras)"); //Se le pide al usuario que escriba un número de 3 cifras (multiplicando) en el teclado.
         multiplicando = read.nextInt(); //Se lee la variable "multiplicando" en el teclado, asignada en el bloque de declaraciones para que así la máquina lo pueda leer.
@@ -50,19 +50,19 @@ public class Practica4 {
         System.out.println("________"); //Se ponen guiones bajos para representar la separación entre la operación y el proceso
 
         resultado_linea1 = last_number_int * multiplicando; //Ahora se calcula el resultado de la línea 1 de la operación comenzando por el último número/cifra del multiplicador multiplicando todo el número del multiplicando
-        String numero = resultado_linea1.toString(); //Se convierte el número total del resultado de la línea 1, de entero a string
+        String numero = Integer.toString(resultado_linea1); //Se convierte el número total del resultado de la línea 1, de entero a string
         int espacios = 4 - numero.length(); //Se crea una variable para referirse a los espacios que hay que dejar (4) dependiendo de la longitud del número
         String blank = " ".repeat(espacios); //Se repiten los espacios que se le asignan a la variable blank para que así visualmente se vea todo en su sitio
         System.out.println("   " + blank + resultado_linea1); //Aquí se mostrarán los espacios necesarios más la variable blank + el resultado de la línea 1
 
         resultado_linea2 = middle_number_int * multiplicando; //Aquí pasa lo mismo que antes pero multiplicando el número del medio del multiplicador por el multiplicando
-        numero = resultado_linea2.toString();//Se realiza el mismo proceso que antes solo que cambiado las variables asignadas para cada número del multiplicador
+        numero = Integer.toString(resultado_linea2);//Se realiza el mismo proceso que antes solo que cambiado las variables asignadas para cada número del multiplicador
         espacios = 4 - numero.length();
         blank = " ".repeat(espacios);
         System.out.println("  " + blank + resultado_linea2);
 
         resultado_linea3 = first_number_int * multiplicando; //Aquí pasa lo mismo que antes pero multiplicando el primer número del multiplicador por el multiplicando
-        numero = resultado_linea3.toString();//Se realiza el mismo proceso que antes solo que cambiado las variables asignadas para cada número del multiplicador
+        numero = Integer.toString(resultado_linea3);//Se realiza el mismo proceso que antes solo que cambiado las variables asignadas para cada número del multiplicador
         espacios = 4 - numero.length();
         blank = " ".repeat(espacios);
         System.out.println(" " + blank + resultado_linea3);
