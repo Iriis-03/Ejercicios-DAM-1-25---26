@@ -2,7 +2,7 @@ package org.example.TEMA2;
 
 import java.util.Scanner;
 
-public class Actividad1 {
+public class Switch {
 
     static void main() {
 
@@ -14,7 +14,7 @@ public class Actividad1 {
 
         switch (palabra) {
 
-            case  "Raul":
+            case "Raul":
                 System.out.println("El alumno es Raúl");
                 break;
             case "Patricia":

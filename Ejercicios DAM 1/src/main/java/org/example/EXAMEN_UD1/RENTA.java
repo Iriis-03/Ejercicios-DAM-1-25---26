@@ -1,8 +1,8 @@
-package org.example;
+package org.example.EXAMEN_UD1;
 
 import java.util.Scanner;
 
-public class Renta {
+public class RENTA {
 
     static void main() {
 
@@ -34,3 +34,4 @@ public class Renta {
 
     }
 }
+
