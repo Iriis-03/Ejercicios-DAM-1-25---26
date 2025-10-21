@@ -55,17 +55,17 @@ public class Actividad1 {
                             anyo_nacimiento_int = anyo_actual - edad;
                         } else {
                             System.out.println("La edad no puede ser negativa.");
-                            return;
+                            break;
                         }
                     } else {
                         System.out.println("La edad introducida no es válida.");
-                        return;
+                        break;
                     }
                     break;
 
                 default:
                     System.out.println("El modo introducido no es correcto. (numérico)");
-                    return;
+                    break;
             }
 
             if (anyo_nacimiento_int >= ANYO_MINIMO && anyo_nacimiento_int <= anyo_actual) {
