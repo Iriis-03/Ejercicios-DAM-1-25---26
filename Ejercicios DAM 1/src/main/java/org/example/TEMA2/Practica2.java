@@ -16,8 +16,9 @@ public class Practica2 {
 
         System.out.println("> Introduce operando:");
         operando1 = read.nextDouble();
+        read.nextLine();
 
-        System.out.println("________________________");
+        System.out.println("------------------------");
 
         System.out.println("[+] -> sumar");
         System.out.println("[-] -> restar");
@@ -25,9 +26,9 @@ public class Practica2 {
         System.out.println("[/] -> dividir");
         System.out.println("[R] -> raíz cuadrada");
 
-        System.out.println("________________________");
+        System.out.println("------------------------");
 
-        System.out.println("Elige una operación");
+        System.out.println("Elige una operación:");
         operacion = read.nextLine();
 
         System.out.println("> Introduce el segundo operando:");
@@ -62,13 +63,5 @@ public class Practica2 {
             System.out.println("La operación introducida no es correcta.");
             break;
         }
-
-
-
-
-
-
-
-
     }
 }
