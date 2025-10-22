@@ -40,23 +40,23 @@ public class Practica2 {
 
             case "+":
                 resultado = operando1 + operando2;
-                System.out.println(operando1 + "+" + operando2);
+                System.out.println("El resultado de " + operando1 + " + " + operando2 + " es " + resultado);
                 break;
             case "-":
                 resultado = operando1 - operando2;
-                System.out.println(operando1 + "-" + operando2);
+                System.out.println("El resultado de " + operando1 + " - " + operando2 + " es " + resultado);
                 break;
             case "x":
                 resultado = operando1 * operando2;
-                System.out.println(operando1 + "x" + operando2);
+                System.out.println("El resultado de " + operando1 + " x " + operando2 + " es " + resultado);
                 break;
             case "/":
                 resultado = operando1 / operando2;
-                System.out.println(operando1 + "/" + operando2);
+                System.out.println("El resultado de " + operando1 + " / " + operando2 + " es " + resultado);
                 break;
             case "R":
                 resultado =  Math.sqrt(operando1);
-                System.out.println();
+                System.out.println("La raíz cuadrada de " + operando1 + " = " + resultado);
                 break;
 
             default:
