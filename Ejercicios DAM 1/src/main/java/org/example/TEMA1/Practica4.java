@@ -17,12 +17,21 @@ public class Practica4 {
         int resultado_linea2;
         int resultado_linea3;
 
+    do {
         System.out.println("Introduce el multiplicando (3 cifras)"); //Se le pide al usuario que escriba un número de 3 cifras (multiplicando) en el teclado.
         multiplicando = read.nextInt(); //Se lee la variable "multiplicando" en el teclado, asignada en el bloque de declaraciones para que así la máquina lo pueda leer.
+        if (multiplicando < 100 || multiplicando > 999) {
+            System.out.println("ERROR: Debes introducir un número de 3 cifras.");
+        }
+    } while (multiplicando < 100 || multiplicando > 999);
 
+    do {
         System.out.println("Introduce el multiplicador (3 cifras)"); //Se le pide al usuario que escriba un número de 3 cifras (multiplicador) en el teclado.
         multiplicador = read.nextInt(); //Se lee la variable "multiplicador" en el teclado, asignada en el bloque de declaraciones para que así la máquina lo pueda leer.
-
+        if (multiplicador < 100 || multiplicador > 999) {
+            System.out.println("ERROR: Debes introducir un número de 3 cifras.");
+        }
+    } while (multiplicador < 100 || multiplicador > 999);
 
         resultado = multiplicando * multiplicador; //Se calcula el resultado mediante la operación de variables "multiplicando" y "multiplicador".
 
