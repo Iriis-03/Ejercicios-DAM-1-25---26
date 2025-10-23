@@ -1,4 +1,4 @@
-package org.example.TEMA2;
+package org.example.TEMA2.BUCLES;
 
 public class Ejercicio3_Bucles {
 

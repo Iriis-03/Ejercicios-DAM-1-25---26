@@ -1,4 +1,4 @@
-package org.example.TEMA2;
+package org.example.TEMA2.BUCLES;
 
 import java.util.Scanner;
 

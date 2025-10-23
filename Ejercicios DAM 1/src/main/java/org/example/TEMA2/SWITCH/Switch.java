@@ -1,4 +1,4 @@
-package org.example.TEMA2;
+package org.example.TEMA2.SWITCH;
 
 import java.util.Scanner;
 
