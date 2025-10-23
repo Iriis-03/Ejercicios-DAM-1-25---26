@@ -21,7 +21,7 @@
                 operando1 = read.nextDouble();
                 read.nextLine();
 
-                //Se muestra por pantalla un menú con todas las operaciones para que el usuario eliga una
+                //Se muestra por pantalla un menú con todas las operaciones para que el usuario eliga una u otra
 
                 System.out.println("------------------------");
 
