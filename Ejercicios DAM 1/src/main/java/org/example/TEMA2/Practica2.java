@@ -1,67 +1,91 @@
-package org.example.TEMA2;
+    package org.example.TEMA2;
 
-import java.util.Scanner;
+    import java.util.InputMismatchException;
+    import java.util.Scanner;
 
-public class Practica2 {
+    public class Practica2 {
 
-    static void main() {
+        static void main() {
 
-        Scanner read = new Scanner(System.in);
+            Scanner read = new Scanner(System.in);
 
-        double operando1 = 0;
-        double operando2 = 0;
-        String operacion = "";
+            double operando1 = 0;
+            double operando2 = 0;
+            String operacion = "";
 
-        System.out.println("**** BIENVENIDO A LA CALCULADORA RÁPIDA ****");
+            System.out.println("**** BIENVENIDO A LA CALCULADORA RÁPIDA ****");
 
-        System.out.println("> Introduce operando:");
-        operando1 = read.nextDouble();
-        read.nextLine();
+            try { //try-catch para controlar si el usuario pone en el teclado formato texto (Saldría por pantalla el mensaje de error del catch)
 
-        System.out.println("------------------------");
+                System.out.println("> Introduce operando:"); // Se le pide al usuario el primer operando
+                operando1 = read.nextDouble();
+                read.nextLine();
 
-        System.out.println("[+] -> sumar");
-        System.out.println("[-] -> restar");
-        System.out.println("[x] -> multiplicar");
-        System.out.println("[/] -> dividir");
-        System.out.println("[R] -> raíz cuadrada");
+                //Se muestra por pantalla un menú con todas las operaciones para que el usuario eliga una
 
-        System.out.println("------------------------");
+                System.out.println("------------------------");
 
-        System.out.println("Elige una operación:");
-        operacion = read.nextLine();
+                System.out.println("[+] -> sumar");
+                System.out.println("[-] -> restar");
+                System.out.println("[x] -> multiplicar");
+                System.out.println("[/] -> dividir");
+                System.out.println("[R] -> raíz cuadrada");
 
-        System.out.println("> Introduce el segundo operando:");
-        operando2 = read.nextDouble();
+                System.out.println("------------------------");
 
-        double resultado = 0;
+                System.out.println("Elige una operación:");
+                operacion = read.nextLine().toLowerCase();
 
-        switch (operacion) {
+                System.out.println("> Introduce el segundo operando:"); // Se le pide al usuario el segundo operando
+                operando2 = read.nextDouble();
 
-            case "+":
-                resultado = operando1 + operando2;
-                System.out.println("El resultado de " + operando1 + " + " + operando2 + " es " + resultado);
-                break;
-            case "-":
-                resultado = operando1 - operando2;
-                System.out.println("El resultado de " + operando1 + " - " + operando2 + " es " + resultado);
-                break;
-            case "x":
-                resultado = operando1 * operando2;
-                System.out.println("El resultado de " + operando1 + " x " + operando2 + " es " + resultado);
-                break;
-            case "/":
-                resultado = operando1 / operando2;
-                System.out.println("El resultado de " + operando1 + " / " + operando2 + " es " + resultado);
-                break;
-            case "R":
-                resultado =  Math.sqrt(operando1);
-                System.out.println("La raíz cuadrada de " + operando1 + " = " + resultado);
-                break;
+            } catch (InputMismatchException e) { // Se especifica dentro del catch que error va a salir en específico
+                System.out.println("ERROR EN EL FORMATO");
+                return; //Si detecta el error, mostraría el mensaje y saldría del programa
+            }
 
-            default:
-            System.out.println("La operación introducida no es correcta.");
-            break;
+            // Control con if para detectar si el usuario selecciona la división como operación y pone como denominador un cero, sería incorrecto el número (0) introducido por teclado
+            if (operacion.equals("/") && operando2 == 0) {
+                System.out.println("ERROR EN EL DENOMINADOR, INTRODUCE UN NÚMERO VÁLIDO");
+                return;
+            }
+            // Control con if para detectar si el usuario selecciona la raíz cuadrada como operación y pone un número negativo, sería incorrecto el número introducido por teclado
+            if (operacion.equals("r") && operando1 < 0) {
+                System.out.println("ERROR EN EL FORMATO, INTRODUCE UN NÚMERO POSITIVO");
+                return;
+            } else {
+
+                double resultado = 0;
+
+                // Dependiendo qué operación va a escoger el usuario se realiza una u otra a través de un switch-case
+
+                switch (operacion) {
+
+                    case "+":
+                        resultado = operando1 + operando2;
+                        System.out.println("El resultado de " + operando1 + " + " + operando2 + " es " + resultado);
+                        break;
+                    case "-":
+                        resultado = operando1 - operando2;
+                        System.out.println("El resultado de " + operando1 + " - " + operando2 + " es " + resultado);
+                        break;
+                    case "x":
+                        resultado = operando1 * operando2;
+                        System.out.println("El resultado de " + operando1 + " x " + operando2 + " es " + resultado);
+                        break;
+                    case "/":
+                        resultado = operando1 / operando2;
+                        System.out.println("El resultado de " + operando1 + " / " + operando2 + " es " + resultado);
+                        break;
+                    case "r":
+                        resultado = Math.sqrt(operando1);
+                        System.out.println("La raíz cuadrada de " + operando1 + " = " + resultado);
+                        break;
+
+                    default:
+                        System.out.println("La operación introducida no es correcta."); // Este mensaje aparecerá por pantalla si el usuario no ha seccionado ninguna operación de las anteriores
+                        break;
+                }
+            }
         }
     }
-}
