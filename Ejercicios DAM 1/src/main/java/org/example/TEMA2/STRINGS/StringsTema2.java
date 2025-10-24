@@ -1,4 +1,4 @@
-package org.example.TEMA2;
+package org.example.TEMA2.STRINGS;
 
 public class StringsTema2 {
 

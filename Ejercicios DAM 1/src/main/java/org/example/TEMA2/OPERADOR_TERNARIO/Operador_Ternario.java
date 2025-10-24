@@ -1,4 +1,4 @@
-package org.example.TEMA2;
+package org.example.TEMA2.OPERADOR_TERNARIO;
 
 public class Operador_Ternario {
 
