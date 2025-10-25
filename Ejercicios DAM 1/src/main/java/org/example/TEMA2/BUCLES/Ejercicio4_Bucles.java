@@ -13,7 +13,6 @@ public class Ejercicio4_Bucles {
         int longitud = palabra.length();
         for (int i = 0;i < longitud;i++){
             System.out.println(palabra.charAt(i));
-
         }
     }
 }
