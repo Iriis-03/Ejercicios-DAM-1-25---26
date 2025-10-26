@@ -1,4 +1,4 @@
-package org.example.TEMA1; // Define el paquete donde se encuentra esta clase
+package org.example.EXAMENES_AÑOS_ANTERIORES.TEMA1; // Define el paquete donde se encuentra esta clase
 
 import java.util.Scanner; // Importa la clase Scanner para poder leer datos desde el teclado
 

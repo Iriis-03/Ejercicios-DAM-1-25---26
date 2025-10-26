@@ -2,7 +2,7 @@ package org.example.TEMA1.PRACTICAS;
 
 import java.util.Scanner;
 
-public class Practica3 {
+public class Practica3_La_báscula_del_feriante_de_Rabasa {
 
     public static void main() {
 

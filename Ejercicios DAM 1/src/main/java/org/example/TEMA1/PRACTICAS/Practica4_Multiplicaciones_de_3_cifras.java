@@ -3,7 +3,7 @@ package org.example.TEMA1.PRACTICAS;
 
 import java.util.Scanner;
 
-public class Practica4 {
+public class Practica4_Multiplicaciones_de_3_cifras {
 
 
     static void main() {
