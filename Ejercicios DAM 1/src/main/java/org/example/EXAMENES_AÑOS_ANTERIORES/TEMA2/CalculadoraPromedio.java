@@ -1,4 +1,4 @@
-package org.example.TEMA2;
+package org.example.EXAMENES_AÑOS_ANTERIORES.TEMA2;
 
 import java.util.Scanner;
 
