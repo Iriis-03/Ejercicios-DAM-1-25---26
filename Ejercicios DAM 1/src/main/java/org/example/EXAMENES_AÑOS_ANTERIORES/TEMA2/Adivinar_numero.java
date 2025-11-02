@@ -10,8 +10,6 @@ public class Adivinar_numero {
 
         boolean perdedor = true;
 
-
-
         System.out.println("Acabo de pensar un número [0-100]… ¿puedes adivinarlo? ¡Tienes 10 intentos!");
 
         int aleatorio = (int) (Math.random() * 100);
