@@ -1,10 +1,15 @@
 package org.example.TEMA3.ARRAYS;
 
 import java.util.Arrays;
+import java.util.Random;
+import java.util.Scanner;
 
 public class array_teoria {
 
     static void main() {
+
+        Random aleatorio = new Random();
+        Scanner read = new Scanner(System.in);
 
         int[] vector = {6, 8, 7, 3, 2};
         System.out.println(Arrays.toString(vector)); //Pasar el vector de int a String
@@ -14,7 +19,7 @@ public class array_teoria {
         System.out.println(vector [1]);
         System.out.println("El segundo vector ha cambiado a: " + vector [1]);
 
-        String [] vector2 = new String [5];
+        String [] vector2 = new String [5]; //Cuántos elementos va a guardar
         System.out.println(Arrays.toString(vector2)); //Da null
         System.out.println(vector2); //Da la dirección de memoria (vector = vector2;)
 
@@ -31,6 +36,12 @@ public class array_teoria {
         //Imprime los vectores de la última posición a la primera
         for (int i = vector.length - 1; i >= 0; i--){
             System.out.println(vector[i]);
+        }
+
+        int [] vector_random = new int[2];
+
+        for (int i = 0; i < vector_random.length; i++){
+            vector_random[i] = aleatorio.nextInt(501);
         }
     }
 }
