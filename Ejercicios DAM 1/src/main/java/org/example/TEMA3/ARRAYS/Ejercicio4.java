@@ -1,32 +1,34 @@
 package org.example.TEMA3.ARRAYS;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejercicio4 {
-
     static void main() {
 
         Scanner read = new Scanner(System.in);
 
-        int vector [] = {2,3,5,1,6};
+        int[] vector = {1, 3, 5, 7, 9};
+        System.out.print("Array original: ");
+        for (int i = 0 ; i < vector.length ; i++) {
+            System.out.print(vector[i] + " ");
+        }
+        System.out.println();
+        System.out.print("Introduce la posición a eliminar: ");
+        int[] vector_2 = new int[vector.length - 1];
+        int borrar = read.nextInt();
 
-        int filtrado [] = new int [vector.length - 1];
 
-        int borrar = 2;
-
-        System.out.println("Introduce la posición del número que quieres eliminar: ");
-        int posicion = read.nextInt();
-
-        for (int i = 0; i < filtrado.length; i++){
-
-            if (i >= borrar){
-                filtrado[i] = vector [i + 1];
+        for (int i = 0; i < vector_2.length ; i++) {
+            if (i >= borrar) {
+                vector_2[i] = vector[i + 1];
             } else {
-                filtrado[i] = vector [i];
+                vector_2[i] = vector[i];
             }
         }
 
-        System.out.println(Arrays.toString(vector));
+        System.out.print("Array resultante: ");
+        for (int i = 0 ; i < vector_2.length ; i++) {
+            System.out.print(vector_2[i] + " ");
+        }
     }
 }
