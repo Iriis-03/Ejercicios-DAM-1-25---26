@@ -12,31 +12,77 @@ public class Practica1 {
 
         Random aleatorio = new Random();
 
-        String [] vector_equipos = new String[0];
-        String [] vector_equipo1 = new String[0];
-        String [] vector_equipo2 = new String[0];
+        boolean salir_bucle= false;
 
-        System.out.println("Equipo 1");
-        System.out.print("Introduce la potencia de los samurais: ");
-        String potencia = read.nextLine();
+        int [] potencias_equipo1 = new int[7];
+        int [] potencias_equipo2 = new int[7];
 
-        potencia = "";
-        String[] subcadenas = potencia.split(" ");
-        System.out.println(Arrays.toString(subcadenas));
-        System.out.println(potencia);
+        for (int e = 1; e <= 2; e++){ //e de equipo
+            do {
+                System.out.println("Equipo " + e);
+                System.out.print("Introduce la potencia de los samuráis: ");
+                String potencia = read.nextLine();
 
-        int [] vector_int = new int[7];
+                String cadena[] = potencia.split(" ");
 
-        for (int i = 0; i < subcadenas.length; i++){
+                int [] potencias_equipo = new int[7];
 
-            vector_int[i] = Integer.parseInt(subcadenas[i]);
+                int potencia_total = 0;
 
-        do {
-            if (vector_equipos > ){
+                for (int i = 0; i < 7; i++){
+                    potencias_equipo[i] = Integer.parseInt(cadena[i]);
+                    potencia_total += potencias_equipo[i];
+                }
+                if (potencia_total == 30){
+                    if (e == 1)
+                        potencias_equipo1 = potencias_equipo;
+                    else
+                        potencias_equipo2 = potencias_equipo;
+                    salir_bucle = true;
+                    System.out.println("Equipo completado.");
+                } else {
+                    System.out.println("ERROR. La potencia total no suma 30.");
+                }
+            }while (!salir_bucle);
+        }
+        //System.out.println(Arrays.toString(potencias_equipo1));
+        //System.out.println(Arrays.toString(potencias_equipo2));
 
+        //Batalla
+        System.out.println("¡Empieza la batalla!");
+
+        int num_aleatorio = aleatorio.nextInt(7);
+        System.out.println("La batalla inicia con el Samurai " + num_aleatorio);
+
+        int derrotas_equipo1 = 0;
+        int derrotas_equipo2 = 0;
+
+        for (int i = 0; i < 7; i++){
+            int p = i + num_aleatorio;
+            if (p > 6)
+                p -= 7;
+            if (potencias_equipo1[p] > potencias_equipo2[p]){
+                System.out.println("Samurai " + p + ". Gana Equipo 1. " + potencias_equipo1[p] + " vs " + potencias_equipo2[p]);
+                derrotas_equipo2++;
+
+            } else if (potencias_equipo1[p] < potencias_equipo2[p]){
+                System.out.println("Samurai " + p + ". Gana Equipo 2. " + potencias_equipo1[p] + " vs " + potencias_equipo2[p]);
+                derrotas_equipo1++;
+
+            } else {
+                System.out.println("Samurai " + p + ". EMPATE. " + potencias_equipo1[p] + " vs " + potencias_equipo2[p]);
+                derrotas_equipo1++;
+                derrotas_equipo2++;
             }
 
-        }while ()
-    }
+            if (derrotas_equipo1 == 4 || derrotas_equipo2 == 4) {
+                break;
+            }
+        }
 
+        if (derrotas_equipo1 == 4) {
+            System.out.println("¡Equipo 2 GANA! Equipo 1 ha tenido 4 bajas.");
+        } else
+            System.out.println("¡Equipo 1 GANA! Equipo 2 ha tenido 4 bajas.");
+    }
 }
