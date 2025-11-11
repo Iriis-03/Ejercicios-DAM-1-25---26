@@ -43,5 +43,6 @@ public class array_teoria {
         for (int i = 0; i < vector_random.length; i++){
             vector_random[i] = aleatorio.nextInt(501);
         }
+        Arrays.asList(vector).contains(6); //Comprobar si el vector contiene el número 6
     }
 }
