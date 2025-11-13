@@ -29,6 +29,7 @@ public class Ruleta {
             System.out.println("ERROR. El número no es válido (0-36)");
             return;
         }
+
         String par_impar_apuesta = "";
         String color_apuesta = "";
         if (numero_apuesta != 0){
