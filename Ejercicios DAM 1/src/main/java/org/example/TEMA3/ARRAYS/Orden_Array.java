@@ -1,26 +1,40 @@
 package org.example.TEMA3.ARRAYS;
 
 import java.util.Arrays;
-import java.util.Collections;
+import java.util.Random;
 
-public class Orden_Array {
+public class modo3_duplicados {
 
     static void main() {
 
-        Integer vector[] = {4,3,2,5,0};
+        Random aleatorio = new Random();
 
-        Integer vector2[] = vector.clone();
+        int numeros[] = new int[10];
 
-        Arrays.sort(vector2);
+        for (int i = 0; i < numeros.length; i++){
 
-        System.out.println(Arrays.toString(vector2));
+            numeros[i] = aleatorio.nextInt(10) + 1;
+        }
 
-//        Arrays.sort(vector2, Collections.reverseOrder());
+        System.out.println(Arrays.toString(numeros));
 
-        System.out.println(Arrays.toString(vector2));
+        boolean comprobar = true;
 
-        int posicion = Arrays.binarySearch(vector2,5);
+        while (comprobar){
+            comprobar = false;
+            Arrays.sort(numeros);
+            System.out.println(Arrays.toString(numeros));
 
-        System.out.println(posicion);
+
+            for (int i = 0; i < numeros.length; i++){
+
+                if (i != numeros.length -1 && numeros[i] == numeros[i + 1]){
+                    System.out.println("Duplicado: " + numeros[i]);
+                    System.out.println(Arrays.toString(numeros));
+                    numeros[i] = aleatorio.nextInt(10) + 1;
+                    comprobar = true;
+                }
+            }
+        }
     }
 }
