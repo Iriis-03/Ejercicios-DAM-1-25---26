@@ -1,4 +1,4 @@
-package org.example.TEMA3.ARRAYS;
+package org.example.TEMA3.ARRAYS.EJERCICIOS;
 
 import java.util.Random;
 

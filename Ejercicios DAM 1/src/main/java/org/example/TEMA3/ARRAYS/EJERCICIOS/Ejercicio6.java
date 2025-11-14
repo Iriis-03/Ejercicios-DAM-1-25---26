@@ -1,6 +1,4 @@
-package org.example.TEMA3.ARRAYS;
-
-import java.util.Arrays;
+package org.example.TEMA3.ARRAYS.EJERCICIOS;
 
 public class Ejercicio6 {
 
