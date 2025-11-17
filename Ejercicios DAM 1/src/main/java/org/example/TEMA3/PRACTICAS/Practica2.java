@@ -19,7 +19,7 @@ public class Practica2 {
         String boleto_array[] = boleto.split("[-/]");
         int boleto_array_int[] = new int[7];
 
-        for (int i = 0; i <7; i++){
+        for (int i = 0; i < 7; i++){
             boleto_array_int[i] = Integer.parseInt(boleto_array[i]);
         }
         int [] resultado_sorteo = new int [8];
