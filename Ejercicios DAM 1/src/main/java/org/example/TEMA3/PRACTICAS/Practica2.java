@@ -26,7 +26,7 @@ public class Practica2 {
         boolean contiene;
         int i = 0;
         do {
-            int num_aleatorio_boleto = aleatorio.nextInt(1,49);
+            int num_aleatorio_boleto = aleatorio.nextInt(1,50);
             contiene = false;
 
             for (int j = 0; j < i; j++) {
@@ -41,7 +41,7 @@ public class Practica2 {
             i++;
         }while (i < 7);
 
-        int reintegro = aleatorio.nextInt(0, 9);
+        int reintegro = aleatorio.nextInt(0, 10);
         resultado_sorteo[7] = reintegro; //reintegro posición 7
 
         System.out.println("Tu boleto:");
