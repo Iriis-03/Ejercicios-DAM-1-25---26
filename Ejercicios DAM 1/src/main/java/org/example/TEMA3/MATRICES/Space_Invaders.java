@@ -37,7 +37,7 @@ public class Space_Invaders {
 
         for (int i = 0; i < mensaje[0].length;i++){
             for (int j = 0; j < mensaje.length; j++) {
-                System.out.println(mensaje[j][i]);
+                System.out.print(mensaje[j][i]);
             }
         }
     }
