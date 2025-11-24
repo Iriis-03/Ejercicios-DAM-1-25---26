@@ -100,8 +100,8 @@ public class Practica3 {
                     }
                 }
             }
-            if (numeroChar==1)
-                character_2= character_1;
+            if (numeroChar == 1)
+                character_2 = character_1;
             for (int i = 1; i < Alto; i++) {
                 linea = pantalla[i][j];
                 if (!linea.matches("["+ character_1 + character_2 +"]{" + 8 + "}")) {
