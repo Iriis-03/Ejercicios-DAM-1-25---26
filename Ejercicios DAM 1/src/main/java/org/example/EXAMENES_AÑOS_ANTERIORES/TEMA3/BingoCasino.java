@@ -113,7 +113,5 @@ public class BingoCasino {
                 }
             }
         }
-
-        read.close();
     }
 }
