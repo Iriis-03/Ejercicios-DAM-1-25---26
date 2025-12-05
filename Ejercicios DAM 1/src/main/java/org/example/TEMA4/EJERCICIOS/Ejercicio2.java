@@ -1,4 +1,4 @@
-package org.example.TEMA4;
+package org.example.TEMA4.EJERCICIOS;
 
 import java.util.Scanner;
 

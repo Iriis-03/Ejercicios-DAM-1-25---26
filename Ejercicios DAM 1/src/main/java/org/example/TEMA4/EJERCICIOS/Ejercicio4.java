@@ -1,6 +1,5 @@
-package org.example.TEMA4;
+package org.example.TEMA4.EJERCICIOS;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejercicio4 {
@@ -23,6 +22,13 @@ public class Ejercicio4 {
         }
 
     }
+
+    /**
+     * @autor Iris
+     * @version 1.0
+     * Método para calcular que día ha tenido más ventas en un bar
+     * @return
+     */
 
     public static double[] recaudacion(){
 
