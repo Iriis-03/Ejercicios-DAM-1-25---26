@@ -19,4 +19,5 @@ public class Ejercicio1 {
 
         return numero * numero * numero;
     }
+
 }
