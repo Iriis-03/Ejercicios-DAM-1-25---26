@@ -1,6 +1,5 @@
 package org.example.PROYECTO_EXPO;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Teclas_de_Piano {
@@ -17,7 +16,6 @@ public class Teclas_de_Piano {
                 break;
 
             System.out.println("Introduce las notas de la canción (Do#4, Sib3, Sol#5...)");
-
             String notas = read.nextLine(); //Do4 Do4 Re4 Do4 Fa4 Mi4 Fa4
             //String notas = "Do4 Do4 Re4 Do4 Fa4 Mi4 Fa4";
             int[] contador_notas = procesar(num_notas, notas);
@@ -25,7 +23,7 @@ public class Teclas_de_Piano {
             for (int i = nota_mas_baja(contador_notas); i <= nota_mas_alta(contador_notas); i++) {
                 System.out.print(contador_notas[i] + " ");
             }
-            System.out.println("");
+            System.out.println();
 
 
         }while(true);
