@@ -5,7 +5,6 @@ import java.util.Scanner;
 /**
  * Programa en el que se cuenta cuántas veces se repite cada nota en una canción introducida por el usuario.
  * @author Iris
- * @version 3.0
  */
 
 public class Teclas_de_Piano {
