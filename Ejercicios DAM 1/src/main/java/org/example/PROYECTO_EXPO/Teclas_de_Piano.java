@@ -21,20 +21,24 @@ public class Teclas_de_Piano {
         do {
             try {
                 System.out.println("Introduce el número de notas de la canción: ");
-                int num_notas = Integer.parseInt(read.nextLine()); // Muestra un mensaje de error si el usuario introduce algo que no sea un número
-                if (num_notas == 0)
+                int num_notas = Integer.parseInt(read.nextLine()); //El int se pasa a String porque antes no podía leer la siguiente línea (problemas en el buffer)
+                if (num_notas == 0) //Si el número de notas es igual a 0 sale del bucle y termina el programa
                     break;
 
                 System.out.println("Introduce las notas de la canción (Do#4, Sib3, Sol#5...)");
                 String notas = read.nextLine();
                 int[] contador_notas = procesar(num_notas, notas);
+                //Se llama al método procesar para que separe cada nota (mediante un split).
+                // Calcula el indice correspondiente de cada nota (mediante el método nota_indice).
+                // Cuenta cuántas veces se pulsa una tecla en el piano (84 posiciones).
+                // Devuelve el array para imprimir por pantalla cuántas veces se ha pulsado cada tecla.
 
                 for (int i = nota_mas_baja(contador_notas); i <= nota_mas_alta(contador_notas); i++) {
                     System.out.print(contador_notas[i] + " ");
                 }
                 System.out.println();
 
-            } catch (NumberFormatException e) {
+            } catch (NumberFormatException e) { // Muestra un mensaje de error si el usuario introduce algo que no sea un número
                 System.out.println("ERROR: Formato incorrecto.");
                 System.out.println("*******************************************");
             }
