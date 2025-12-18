@@ -16,9 +16,14 @@ public class Teclas_de_Piano_Juez {
             String notas = read.nextLine();
             int[] contador_notas = procesar(num_notas, notas);
 
-            for (int i = nota_mas_baja(contador_notas); i <= nota_mas_alta(contador_notas); i++) {
-                System.out.print(contador_notas[i] + " ");
+            int baja = nota_mas_baja(contador_notas);
+            int alta = nota_mas_alta(contador_notas);
+
+            for (int i = baja; i <= alta; i++) {
+                System.out.print(contador_notas[i]);
+                if (i < alta) System.out.print(" ");
             }
+
             System.out.println();
 
         } while (true);
