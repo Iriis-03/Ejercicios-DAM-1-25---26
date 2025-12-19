@@ -22,7 +22,7 @@ public class Teclas_de_Piano_Juez {
             for (int i = mas_baja; i < mas_alta ; i++) {
                 System.out.print(contador_notas[i] + " ");
             }
-            System.out.println(contador_notas[mas_alta]);
+            System.out.println(contador_notas[mas_alta]); //Evita el espacio al final de la linea
 
         } while (true);
 
