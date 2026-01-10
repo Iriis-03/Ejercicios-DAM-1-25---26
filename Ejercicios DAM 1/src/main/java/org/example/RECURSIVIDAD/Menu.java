@@ -1,5 +1,6 @@
 package org.example.RECURSIVIDAD;
 
+import java.util.Enumeration;
 import java.util.Scanner;
 
 public class Menu {
@@ -25,6 +26,7 @@ public class Menu {
 
         System.out.println(binario(10001110));
         System.out.println(a_binario(128));
+        System.out.println(mostrar_suma(4,1));
 
 
     }
@@ -144,7 +146,24 @@ public class Menu {
 
     public static boolean orden_alfabetico(String palabra, int posicion){
 
-//        if (palabra )
-        return true;
+
+        if (posicion == palabra.length()){
+            return true;
+        } else {
+            return (palabra.charAt(posicion) < palabra.charAt(posicion + 1)) && orden_alfabetico(palabra,posicion + 1);
+        }
+
+    }
+
+    public static int mostrar_suma(int num, int indice){
+
+        if (num == indice){
+            System.out.print(num + " = ");
+            return num;
+        } else {
+            System.out.print(indice + "+");
+            return indice + mostrar_suma(num,indice + 1);
+        }
+
     }
 }
