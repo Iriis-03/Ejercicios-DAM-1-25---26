@@ -33,6 +33,8 @@ public class Menu {
 
     public static void menu(){
 
+        Scanner read = new Scanner(System.in);
+
         System.out.println("*** Batería de ejercicios sobre recursividad ***");
         System.out.println("Selecciona a continuación el modo que quieras ejecutar...");
         System.out.println("    1 - Dígitos");
@@ -43,22 +45,69 @@ public class Menu {
         System.out.println("    6 - Orden alfabético");
         System.out.println("    7 - Mostrar suma");
 
-        int opcion = 0;
+        int opcion = read.nextInt();
 
         switch (opcion){
             case 1:
+                System.out.println("Has elegido el modo [1]: DÍGITOS");
+                System.out.println("Introduce un número: ");
+                int num = read.nextInt();
+                System.out.println(dijitos(num));
                 break;
             case 2:
+                System.out.println("Has elegido el modo [2]: POTENCIAS");
+                System.out.println("Introduce un número (base): ");
+                int base = read.nextInt();
+                System.out.println("Introduce un número (exponente): ");
+                int exponente = read.nextInt();
+                System.out.println(potencias(base, exponente));
                 break;
             case 3:
+                System.out.println("Has elegido el modo [3]: DEL REVÉS");
+                System.out.println("¿Quieres invertir una frase o un número? (F/N)");
+                String eleccion = read.next();
+                if (eleccion.equals("N")){
+                    System.out.println("Introduce un número: ");
+                    int N = read.nextInt();
+                    del_reves(N);
+                } else if (eleccion.equals("F")){
+                    System.out.println("Introduce un texto: ");
+                    String F = read.next();
+                    del_reves_char_sin_vector(0, F);
+                }
                 break;
             case 4:
+                System.out.println("Has elegido el modo [4]: BINARIO");
+                System.out.println("Introduce un número: ");
+                int num_bin = read.nextInt();
+                if (binario(num_bin)){
+                    System.out.println("Es binario");
+                } else {
+                    System.out.println("No es binario");
+                }
+
                 break;
             case 5:
+                System.out.println("Has elegido el modo [5]: A BINARIO");
+                System.out.println("Introduce un número: ");
+                int num_a_bin = read.nextInt();
+                System.out.println(a_binario(num_a_bin));
                 break;
             case 6:
+                System.out.println("Has elegido el modo [6]: ORDEN ALFABÉTICO");
+                System.out.println("Introduce una palabra: ");
+                String palabra = read.next();
+                if (orden_alfabetico(palabra, 0)){
+                    System.out.println("Esta ordenada alfabéticamente");
+                } else {
+                    System.out.println("No esta ordenada alfabéticamente");
+                }
                 break;
             case 7:
+                System.out.println("Has elegido el modo [7]: MOSTRAR SUMA");
+                System.out.println("Introduce un número: ");
+                int num_suma = read.nextInt();
+                System.out.println(mostrar_suma(num_suma, 1));
                 break;
         }
     }
@@ -166,4 +215,5 @@ public class Menu {
         }
 
     }
+    
 }
