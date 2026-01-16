@@ -6,6 +6,5 @@ public class PersonaApp {
 
         Persona profe = new Persona("patricia","10000000J",20);
 
-        profe.
     }
 }
