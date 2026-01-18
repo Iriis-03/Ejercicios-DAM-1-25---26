@@ -22,18 +22,22 @@ public class Bocadillo {
         }
 
         public String getNombre(){
+
             return nombre;
         }
 
         public void setNombre(String nombre){
+
             this.nombre = nombre;
         }
 
         public String getPan(){
+
             return pan;
         }
 
         public void setPan(String pan){
+
             this.pan = pan;
         }
 
