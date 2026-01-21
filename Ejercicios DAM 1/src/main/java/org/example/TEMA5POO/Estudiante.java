@@ -2,6 +2,8 @@ package org.example.TEMA5POO;
 
 public class Estudiante {
 
+    private static final String CORREO_FORMAT = "^[A-Za-z0-9+_.-]+@alu.edu.gva.es$";
+
     private static int contadorEstudiantes = 0;
 
     private String nombre;
@@ -14,11 +16,24 @@ public class Estudiante {
         this.nombre = nombre;
         this.curso = curso;
         this.email = email;
-        nia = contadorEstudiantes + 1;
+        setNia();
     }
 
     public Estudiante(String nombre){
         this(nombre, "", "");
+    }
+
+    public static int obtenerTotalEstudiantes(){
+        return contadorEstudiantes;
+    }
+
+    public static boolean validarCorreo(String correo){
+
+        if (correo.matches(CORREO_FORMAT)){
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
@@ -29,16 +44,6 @@ public class Estudiante {
                 ", nia=" + nia +
                 ", email='" + email + '\'' +
                 '}';
-    }
-
-
-
-    public static int getContadorEstudiantes() {
-        return contadorEstudiantes;
-    }
-
-    public static void setContadorEstudiantes(int contadorEstudiantes) {
-        Estudiante.contadorEstudiantes = contadorEstudiantes;
     }
 
     public String getNombre() {
@@ -61,8 +66,8 @@ public class Estudiante {
         return nia;
     }
 
-    public void setNia(int nia) {
-        this.nia = nia;
+    private void setNia() {
+        nia = ++contadorEstudiantes;
     }
 
     public String getEmail() {

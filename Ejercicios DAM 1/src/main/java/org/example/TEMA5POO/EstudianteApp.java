@@ -13,5 +13,12 @@ public class EstudianteApp {
 
         System.out.println(david.getNia());
         System.out.println(david);
+
+        Estudiante adrian = new Estudiante("adrian");
+
+        System.out.println("Hay " + Estudiante.obtenerTotalEstudiantes() + " estudiantes.");
+
+        System.out.println(Estudiante.validarCorreo("iriis@mutxamel.com"));
+        System.out.println(Estudiante.validarCorreo("iriis@alu.edu.gva.es"));
     }
 }
