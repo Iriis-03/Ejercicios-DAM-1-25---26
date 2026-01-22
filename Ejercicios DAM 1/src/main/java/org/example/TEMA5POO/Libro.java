@@ -5,9 +5,11 @@ public class Libro {
     private static int cantidadLibros = 0;
     private static int librosDisponibles = 0;
 
+    private static final String CADENA_ID = "LIB";
+
     private String titulo;
     private String autor;
-    private int id;
+    private String id;
     private boolean disponible;
 
     public Libro (String titulo, String autor){
@@ -15,36 +17,47 @@ public class Libro {
         this.titulo = titulo;
         this.autor = autor;
         disponible = true;
-        setId();
+        cantidadLibros++;
+        librosDisponibles++;
+        id = CalcularId();
     }
 
-    public static int CalcularId(){
-
+    private String CalcularId(){
+        return CADENA_ID + cantidadLibros;
     }
 
-    public static void prestar(boolean disponible, int librosDisponibles){
+    public void prestar(){
 
-        if (disponible == true){
-
+        if (disponible){
+            disponible = false;
+            System.out.println("El libro " + titulo + " ha sido prestado con éxito");
+            librosDisponibles--;
         } else {
-            System.out.println("El libro ha sido prestado con éxito");
+            System.out.println("El libro " + titulo + " no está disponible");
         }
     }
 
-    public static void devolver(){
+    public void devolver(){
 
+        if (!disponible){
+            disponible = true;
+            System.out.println("El libro " + titulo + " ha sido devuelto");
+            librosDisponibles++;
+        } else {
+            System.out.println("El libro " + titulo + " está disponible. No se puede devolver.");
+        }
     }
 
-    public static void estaDisponible(){
-
+    public boolean estaDisponible(){
+        return disponible;
     }
 
     public static int getTotalLibros(){
-
+        return cantidadLibros;
     }
 
     public static int getLibrosDisponibles(){
-
+        return librosDisponibles;
     }
 
     public String getTitulo() {
@@ -63,12 +76,12 @@ public class Libro {
         this.autor = autor;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId() {
-        id = ++cantidadLibros;
+    public void setId(String id) {
+       this.id = id;
     }
 
     public boolean isDisponible() {
@@ -78,6 +91,19 @@ public class Libro {
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
     }
+
+
+
+    @Override
+    public String toString() {
+        return "Libro{" +
+                "titulo='" + titulo + '\'' +
+                ", autor='" + autor + '\'' +
+                ", id='" + id + '\'' +
+                ", disponible=" + disponible +
+                '}';
+    }
+
 
 
 
