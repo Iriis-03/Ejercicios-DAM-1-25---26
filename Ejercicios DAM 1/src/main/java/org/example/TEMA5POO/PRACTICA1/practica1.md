@@ -16,7 +16,7 @@
 ### 2. Estructura de clases
 
 ### 3. Programa principal ("El Formiguero" y "La Rebelión")
-![]()
+![](img/inmobiliaria.png)
 ### 4. Pruebas
 
 ### 5. Entrega
