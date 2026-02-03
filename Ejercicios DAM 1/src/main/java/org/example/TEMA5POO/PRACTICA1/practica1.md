@@ -201,3 +201,6 @@ public class Casa {
 ### 4. Pruebas
 
 ### 5. Entrega
+[x] Código fuente en GitHub: ()
+[] Documentación
+[] Pruebas
