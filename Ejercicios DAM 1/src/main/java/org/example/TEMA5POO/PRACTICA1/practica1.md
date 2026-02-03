@@ -11,11 +11,12 @@
 6. [Entrega](#5-entrega)
 
 ### 1. Intro
+> La práctica consiste en una app ...
 
 ### 2. Estructura de clases
 
 ### 3. Programa principal ("El Formiguero" y "La Rebelión")
-
+![]()
 ### 4. Pruebas
 
 ### 5. Entrega
