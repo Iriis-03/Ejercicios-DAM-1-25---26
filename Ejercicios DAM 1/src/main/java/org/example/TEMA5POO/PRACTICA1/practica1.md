@@ -201,6 +201,6 @@ public class Casa {
 ### 4. Pruebas
 
 ### 5. Entrega
-[x] Código fuente en GitHub: ()
-[] Documentación
-[] Pruebas
+- [x] Código fuente en GitHub: (https://github.com/Iriis-03/PROGRAMACION-DAM-1/blob/3e1c6a329fc1c0f0f3fe38fbe28fe8eefc6ea4f5/Ejercicios%20DAM%201/src/main/java/org/example/TEMA5POO/PRACTICA1/Programa.java)
+- [] Documentación
+- [] Pruebas
