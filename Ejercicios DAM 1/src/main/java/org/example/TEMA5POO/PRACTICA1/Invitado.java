@@ -7,20 +7,20 @@ public class Invitado {
 
     private String nombre;
     private String profesion;
-    private LocalDate fecha_visita;
+    private LocalDate fecha_visita; //Fecha en la qu eha ido el invitado al programa
     private int temporada;
 
     public Invitado(String nombre, String profesion, int temporada) {
         this.nombre = nombre;
         this.profesion = profesion;
-        fecha_visita = fechaPrograma();
+        fecha_visita = fechaPrograma(); //Preguntar al usuario a través del método fechaPrograma la fecha en la que ha ido
         this.temporada = temporada;
     }
 
     public LocalDate fechaPrograma(){
-        Scanner read = new Scanner(System.in);
+        Scanner read = new Scanner(System.in); //Se crea la clase Scanner para leer por teclado con un read
 
-        System.out.println("Introduce el año en el que acudirá el invitado: " + );
+        System.out.println("Introduce el año en el que acudirá el invitado: ");
         int anyo = read.nextInt();
         System.out.println("Introduce el día: ");
         int dia = read.nextInt();
@@ -28,27 +28,7 @@ public class Invitado {
         int mes = read.nextInt();
 
 
-        return LocalDate.of(anyo, mes, dia);
-    }
-
-    public void invitadosTemporada(int temporada){
-
-    }
-
-    public int vecesInvitado(String nombre){
-
-    }
-
-    public void rastrearInvitado(String nombre){
-
-    }
-
-    public boolean buscarInvitado(String nombre){
-
-    }
-
-    public void invitadoAntes(String nombre){
-
+        return LocalDate.of(anyo, mes, dia); //Devuelve con un return la fecha introducida por el usuario
     }
 
     public String getNombre() {

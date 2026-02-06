@@ -5,9 +5,9 @@ public class LibroApp {
     static void main(String[] args) {
         Editorial millenium = new Editorial("Millenium", "España");
 
-        Libro prueba = new Libro("Joaquin", "Jacobo", millenium);
+        Libro prueba = new Libro("Joaquin", "Jacobo");
 
-        Libro crepusculo = new Libro("Crepusculo", "Iris", millenium);
+        Libro crepusculo = new Libro("Crepusculo", "Iris");
 
         System.out.println("Total de libros creados: " + Libro.getTotalLibros());
         System.out.println("Libros disponibles: " + Libro.getLibrosDisponibles());

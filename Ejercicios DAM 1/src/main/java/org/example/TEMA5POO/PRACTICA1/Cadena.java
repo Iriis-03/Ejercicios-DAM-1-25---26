@@ -7,14 +7,14 @@ public class Cadena {
     private String nombre;
     private ArrayList<Programa> listaProgramas;
 
-    public Cadena(String nombre, ArrayList<Programa> listaProgramas) {
+    public Cadena(String nombre) {
         this.nombre = nombre;
-        this.listaProgramas = listaProgramas;
+        this.listaProgramas = new ArrayList<>(); //Se crea un ArrayList para la lista de programas que tiene la cadena
     }
 
     public void anadirPrograma(Programa programa){
 
-        listaProgramas.add(programa);
+        listaProgramas.add(programa); //Se añade con un .add, un programa a la cadena
 
     }
 
@@ -36,15 +36,6 @@ public class Cadena {
 
     @Override
     public String toString() {
-        return "Cadena{" +
-                "nombre='" + nombre + '\'' +
-                ", listaProgramas=" + listaProgramas +
-                '}';
+        return "Cadena{nombre='" + nombre + "', totalProgramas=" + listaProgramas.size() + "}";
     }
-
-
-
-
-
-
 }

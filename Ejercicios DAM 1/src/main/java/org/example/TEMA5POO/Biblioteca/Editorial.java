@@ -1,5 +1,7 @@
 package org.example.TEMA5POO.Biblioteca;
 
+import java.util.ArrayList;
+
 public class Editorial {
 
     private String nombre;
@@ -50,5 +52,7 @@ public class Editorial {
                 ", listaLibros=" + listaLibros +
                 '}';
     }
+
+
 
 }

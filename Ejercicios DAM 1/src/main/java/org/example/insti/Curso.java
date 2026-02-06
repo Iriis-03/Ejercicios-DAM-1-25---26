@@ -5,8 +5,6 @@ import lombok.*;
 @Getter @Setter
 @ToString
 @NoArgsConstructor
-@AllArgsConstructor
-
 public class Curso {
 
     @NonNull
@@ -17,5 +15,9 @@ public class Curso {
         this.nombre = nombre;
     }
 
-
+    public Curso(@NonNull String nombre, int horas) {
+        this.nombre = nombre;
+        this.horas = horas;
+    }
 }
+
