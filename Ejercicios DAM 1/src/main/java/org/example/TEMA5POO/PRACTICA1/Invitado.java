@@ -15,21 +15,40 @@ public class Invitado {
         this.profesion = profesion;
         fecha_visita = fechaPrograma();
         this.temporada = temporada;
+    }
 
+    public LocalDate fechaPrograma(){
+        Scanner read = new Scanner(System.in);
+
+        System.out.println("Introduce el año en el que acudirá el invitado: " + );
+        int anyo = read.nextInt();
+        System.out.println("Introduce el día: ");
+        int dia = read.nextInt();
+        System.out.println("Introduce el mes: ");
+        int mes = read.nextInt();
+
+
+        return LocalDate.of(anyo, mes, dia);
+    }
+
+    public void invitadosTemporada(int temporada){
 
     }
 
-    private LocalDate fechaPrograma(){
-        Scanner read = new Scanner(System.in);
+    public int vecesInvitado(String nombre){
 
-        System.out.println("Introduce el día de la visita: ");
-        int dia = read.nextInt();
-        System.out.println("Introduce el mes de la visita: ");
-        int mes = read.nextInt();
-        System.out.println("Introduce el año de la visita: ");
-        int anyo = read.nextInt();
+    }
 
-        return LocalDate.of(anyo, mes, dia);
+    public void rastrearInvitado(String nombre){
+
+    }
+
+    public boolean buscarInvitado(String nombre){
+
+    }
+
+    public void invitadoAntes(String nombre){
+
     }
 
     public String getNombre() {

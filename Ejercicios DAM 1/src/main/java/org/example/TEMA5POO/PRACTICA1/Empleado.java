@@ -8,20 +8,6 @@ public class Empleado {
     private String cargo;
     private Empleado director;
 
-
-    class Element {
-
-        private String id;
-
-        public Element() {
-
-        }
-
-        public String getId() {
-            return id;
-        }
-    }
-
     public Empleado(String nombre, String cargo) {
         this.nombre = nombre;
         this.cargo = obtenerCargo(cargo);
